@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CORTEXA NEXUS | Connecting Ideas. Building Digital Futures.</title>
+<meta name="description" content="Discover CORTEXA NEXUS, your digital development partner for modern websites, mobile applications, custom software, UI/UX design and e-commerce solutions.">
+<meta property="og:title" content="CORTEXA NEXUS | Connecting Ideas. Building Digital Futures.">
+<meta property="og:description" content="Websites, apps, custom software, UI/UX design and e-commerce with transparent pricing.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://example.com/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+:root{--bg:#070907;--bg2:#0D110D;--card:#121812;--a:#B7FF3C;--a2:#8DDB2F;--t:#F5F7F2;--t2:#A0A69D;--t3:#737B71;--bd:rgba(255,255,255,.14);--ease:cubic-bezier(.22,.7,.2,1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--t);font:400 16px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,h4{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.1;margin:0;letter-spacing:-.02em}
+p{margin:0}a{color:inherit;text-decoration:none}ul{margin:0;padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--a);outline-offset:3px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+section{padding:110px 0;position:relative}.alt{background:var(--bg2)}
+.mono,.eyebrow{font-family:"JetBrains Mono",monospace}
+.eyebrow{color:var(--a);font-size:.78rem;letter-spacing:.14em;display:block;margin-bottom:14px}
+h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:700;max-width:17ch}
+.sub{color:var(--t2);max-width:62ch;margin-top:16px}.head{margin-bottom:48px}
+.g{color:var(--a)}
+/* liquid glass: g1 subtle, g2 premium, g3 signature */
+.glass{position:relative;isolation:isolate;border-radius:22px;border:1px solid var(--bd);background:linear-gradient(135deg,rgba(255,255,255,.07),rgba(255,255,255,.015)),radial-gradient(circle at var(--mx,30%) var(--my,0%),rgba(183,255,60,.15),transparent 55%);-webkit-backdrop-filter:blur(var(--bl,16px)) saturate(160%);backdrop-filter:blur(var(--bl,16px)) saturate(160%);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),inset 0 -1px 0 rgba(183,255,60,.1),0 14px 40px rgba(0,0,0,.45);transition:transform .4s var(--ease),box-shadow .4s,border-color .4s}
+.glass::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(255,255,255,.55),transparent 30%,transparent 68%,rgba(183,255,60,.45));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.g1{--bl:8px;border-radius:14px}.g2{--bl:16px}.g3{--bl:28px;border-radius:28px;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),inset 0 0 40px rgba(183,255,60,.05),0 24px 70px rgba(0,0,0,.55)}
+@supports not (backdrop-filter:blur(1px)){.glass{background:var(--card)}}
+.lift:hover{transform:translateY(-6px);border-color:rgba(183,255,60,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 20px 56px rgba(183,255,60,.1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 26px;border-radius:999px;font:500 .95rem Inter;border:1px solid var(--bd);background:rgba(255,255,255,.05);color:var(--t);cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
+.btn:hover{transform:translateY(-2px);border-color:var(--a)}.btn:active{transform:scale(.97)}
+.btn.p{background:var(--a);color:#0a0d08;border-color:var(--a);font-weight:700}.btn.p:hover{box-shadow:0 0 32px rgba(183,255,60,.45)}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+#sp{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--a);transform:scaleX(0);transform-origin:0;z-index:99}
+#ld{position:fixed;inset:0;background:var(--bg);z-index:98;display:grid;place-items:center;transition:opacity .6s;font:500 .8rem "JetBrains Mono";color:var(--a);letter-spacing:.3em}
+#ld.off{opacity:0;pointer-events:none}
+/* nav */
+header{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));left:0;right:0;z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 14px 0 20px;gap:12px;border-radius:999px;transition:background .3s}
+header.sc .nav{--bl:30px;background:rgba(10,14,10,.78)}
+.logo{display:flex;align-items:center;gap:10px;font:700 1.08rem "Space Grotesk";letter-spacing:.05em}
+.logo small{display:block;font:500 .58rem "JetBrains Mono";color:var(--a);letter-spacing:.38em;margin-top:-1px}
+.menu{display:flex;gap:2px}
+.menu a{display:block;padding:8px 13px;border-radius:999px;color:var(--t2);font-size:.9rem;transition:.25s}
+.menu a:hover{color:var(--t)}.menu a.on{color:var(--a);background:rgba(183,255,60,.1)}
+.burger{display:none;width:44px;height:44px;background:none;border:1px solid var(--bd);border-radius:50%;cursor:pointer;position:relative}
+.burger i{position:absolute;left:12px;right:12px;top:21px;height:2px;background:var(--t);transition:.3s var(--ease)}
+.burger i:nth-child(1){transform:translateY(-6px)}.burger i:nth-child(3){transform:translateY(6px)}
+.burger.x i:nth-child(1){transform:rotate(45deg)}.burger.x i:nth-child(2){opacity:0}.burger.x i:nth-child(3){transform:rotate(-45deg)}
+/* hero */
+#home{min-height:100svh;display:flex;align-items:center;padding:140px 0 90px;overflow:hidden}
+#home::before{content:"";position:absolute;width:700px;height:700px;right:-160px;top:6%;background:radial-gradient(circle,rgba(183,255,60,.17),transparent 65%);animation:drift 14s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-80px,60px)}}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;position:relative}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5.3rem);font-weight:700}
+.lead{color:var(--t2);font-size:1.1rem;max-width:52ch;margin:26px 0 34px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.tag-top{display:inline-block;padding:8px 16px;font:400 .72rem "JetBrains Mono";letter-spacing:.12em;color:var(--a);margin-bottom:26px}
+.rise{opacity:0;transform:translateY(26px);animation:rise .9s var(--ease) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.scrollcue{margin-top:48px;font:400 .72rem "JetBrains Mono";color:var(--t3);display:flex;align-items:center;gap:10px}
+.scrollcue i{width:1px;height:34px;background:linear-gradient(var(--a),transparent);animation:cue 2s infinite}
+@keyframes cue{50%{transform:scaleY(.4);transform-origin:top}}
+.viz{position:relative;aspect-ratio:1;max-width:540px;width:100%;margin-inline:auto}
+.l{position:absolute;transform:translate(calc(var(--px,0)*var(--d,10)*1px),calc(var(--py,0)*var(--d,10)*1px));transition:transform .25s ease-out}
+.fl{animation:float 7s ease-in-out infinite}@keyframes float{50%{transform:translateY(-14px)}}
+.viz svg{width:100%;height:100%;overflow:visible}
+.ln{stroke:var(--a);stroke-opacity:.55;stroke-width:1.2;stroke-dasharray:6 8;animation:dash 14s linear infinite}@keyframes dash{to{stroke-dashoffset:-140}}
+.nd{fill:var(--a);animation:pulse 3s ease-in-out infinite}@keyframes pulse{50%{opacity:.3}}
+.sph{border-radius:50%;background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.55),rgba(183,255,60,.18) 35%,rgba(255,255,255,.03) 70%);border:1px solid rgba(255,255,255,.25);box-shadow:inset -8px -10px 24px rgba(183,255,60,.18),0 12px 40px rgba(0,0,0,.5)}
+.pn{padding:12px 18px;font-size:.82rem;color:var(--t2);white-space:nowrap}.pn b{color:var(--a);font-weight:500;font-family:"JetBrains Mono"}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.rv.in{opacity:1;transform:none}
+/* generic */
+.grid{display:grid;gap:20px}.g3c{grid-template-columns:repeat(3,1fr)}.g2c{grid-template-columns:repeat(2,1fr)}
+.card{padding:28px}.card h3{font-size:1.2rem;margin-bottom:8px}.card p{color:var(--t2);font-size:.95rem}
+.ico{width:48px;height:48px;border-radius:14px;border:1px solid var(--bd);display:grid;place-items:center;color:var(--a);margin-bottom:18px;background:rgba(183,255,60,.07)}
+.ico svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tags span{font:400 .72rem "JetBrains Mono";padding:4px 11px;color:var(--t2);border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04)}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.split .sub+.sub{margin-top:14px}
+.vm{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+.stmt{font:700 1.4rem "Space Grotesk";text-align:center;margin-top:12px}
+.svc{cursor:pointer;display:flex;flex-direction:column}.svc .go{margin-top:auto;padding-top:20px;color:var(--a);font-size:.9rem;display:flex;gap:8px;align-items:center}
+.svc .go b{transition:transform .3s}.svc:hover .go b{transform:translateX(6px)}
+/* tabs */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.tabs button{min-height:42px;padding:0 20px;border-radius:999px;border:1px solid var(--bd);background:rgba(255,255,255,.04);color:var(--t2);cursor:pointer;font:500 .9rem Inter;transition:.25s}
+.tabs button:hover{color:var(--t);border-color:var(--a)}.tabs button[aria-pressed=true]{background:var(--a);color:#0a0d08;border-color:var(--a)}
+.tech{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.tc{padding:20px 14px;text-align:center;position:relative;animation:pop .5s var(--ease) backwards}
+@keyframes pop{from{opacity:0;transform:scale(.92) translateY(10px)}}
+.tc .m{width:46px;height:46px;margin:0 auto 10px;border-radius:14px;display:grid;place-items:center;font:500 .9rem "JetBrains Mono";color:var(--a);background:rgba(183,255,60,.08);border:1px solid rgba(183,255,60,.25);transition:transform .35s var(--ease)}
+.tc:hover .m{transform:translateY(-4px) rotate(-6deg)}
+.tc[data-tip]::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 8px);transform:translate(-50%,6px);padding:6px 12px;border-radius:10px;font-size:.74rem;white-space:nowrap;background:rgba(18,24,18,.92);border:1px solid var(--bd);color:var(--t2);opacity:0;pointer-events:none;transition:.25s;z-index:3}
+.tc:hover::after,.tc:focus-visible::after{opacity:1;transform:translate(-50%,0)}
+.note{color:var(--t3);font-size:.85rem;margin-top:24px}
+/* portfolio */
+.proj{padding:0;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:opacity .35s,transform .4s var(--ease)}
+.proj.out{opacity:0;transform:scale(.94)}.proj.hide{display:none}
+.shot{height:200px;padding:18px;background:linear-gradient(135deg,#0d130e,#1b2c15);position:relative;overflow:hidden}
+.shot svg{width:100%;height:100%;transition:transform .6s var(--ease)}.proj:hover .shot svg{transform:scale(1.07)}
+.shot .ov{position:absolute;inset:0;display:grid;place-items:center;background:rgba(7,9,7,.45);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;transition:.35s;color:var(--a);font:500 .85rem "JetBrains Mono"}
+.proj:hover .ov,.proj:focus-visible .ov{opacity:1}
+.badge{position:absolute;top:14px;right:14px;font:500 .7rem "JetBrains Mono";padding:4px 12px;border-radius:999px;background:rgba(7,9,7,.85);border:1px solid var(--a);color:var(--a);z-index:2}
+.pb{padding:24px}.cat{font:400 .74rem "JetBrains Mono";color:var(--t3)}.pb h3{margin:6px 0 8px;font-size:1.2rem}.pb p{color:var(--t2);font-size:.93rem}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;--p:0}
+.steps::before,.steps::after{content:"";position:absolute;top:27px;left:6%;height:2px;border-radius:2px}
+.steps::before{right:6%;background:rgba(183,255,60,.15)}.steps::after{width:calc(var(--p)*88%);background:var(--a);box-shadow:0 0 14px var(--a)}
+.step{padding:0 4px;position:relative}.step .gl{padding:24px;height:100%;margin-top:0}
+.num{width:54px;height:54px;border-radius:50%;background:var(--bg);border:2px solid rgba(183,255,60,.35);color:var(--t3);display:grid;place-items:center;font:700 1.1rem "Space Grotesk";position:relative;z-index:1;margin-bottom:18px;transition:.5s}
+.step.on .num{border-color:var(--a);color:var(--a);box-shadow:0 0 24px rgba(183,255,60,.35)}
+.step h3{font-size:1.2rem;margin-bottom:8px}.step p{color:var(--t2);font-size:.93rem}
+.why .card::after{content:"";position:absolute;right:-26px;top:-26px;width:100px;height:100px;border:1px solid rgba(183,255,60,.25);border-radius:18px;transform:rotate(45deg);pointer-events:none}
+/* pricing */
+.plan{padding:30px;display:flex;flex-direction:column}
+.plan.ft{--bl:28px;border-color:rgba(183,255,60,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 0 60px rgba(183,255,60,.14),0 24px 70px rgba(0,0,0,.5)}
+@media(min-width:981px){.plan.ft{transform:translateY(-14px)}.plan.ft:hover{transform:translateY(-20px)}}
+.pop{align-self:flex-start;font:500 .7rem "JetBrains Mono";padding:4px 12px;border-radius:999px;background:var(--a);color:#0a0d08;margin-bottom:12px}
+.plan h3{font-size:1.15rem}.price{font:700 2.3rem "Space Grotesk";color:var(--a);margin:10px 0 2px}.price small{font:400 .85rem Inter;color:var(--t2)}
+.ideal{color:var(--t2);font-size:.88rem;margin-bottom:18px}
+.plan li{padding:6px 0 6px 24px;position:relative;font-size:.92rem;color:var(--t)}
+.plan li::before{content:"";position:absolute;left:2px;top:13px;width:10px;height:5px;border-left:2px solid var(--a);border-bottom:2px solid var(--a);transform:rotate(-45deg)}
+.plan .btn{margin-top:auto}.plan ul{margin-bottom:24px}
+.disc{margin-top:26px;padding:18px 22px;font-size:.88rem;color:var(--t2)}
+/* calc */
+.calc{margin-top:70px;padding:40px}
+.calc h3{font-size:clamp(1.6rem,3.4vw,2.4rem)}
+.cs{margin-top:28px}.cs>b{display:block;font:500 .78rem "JetBrains Mono";color:var(--a);letter-spacing:.1em;margin-bottom:12px;font-weight:500}
+.opts{display:flex;gap:10px;flex-wrap:wrap}
+.opts button{min-height:42px;padding:0 18px;border-radius:999px;border:1px solid var(--bd);background:rgba(255,255,255,.04);color:var(--t2);cursor:pointer;font:500 .9rem Inter;transition:.25s}
+.opts button:hover{border-color:var(--a);color:var(--t)}.opts button[aria-pressed=true]{background:rgba(183,255,60,.16);border-color:var(--a);color:var(--a)}
+.res{margin-top:32px;padding:26px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.res small{color:var(--t2);display:block}.res .big{font:700 clamp(1.8rem,4vw,2.8rem) "Space Grotesk";color:var(--a)}
+/* faq */
+.faq{max-width:820px;display:grid;gap:12px}
+.fq{padding:0;border-radius:18px}.fq button{width:100%;text-align:left;background:none;border:0;color:var(--t);font:500 1.05rem "Space Grotesk";padding:20px 24px;display:flex;justify-content:space-between;gap:16px;cursor:pointer;align-items:center}
+.fq i{width:16px;height:16px;position:relative;flex:none}.fq i::before,.fq i::after{content:"";position:absolute;left:0;right:0;top:7px;height:2px;background:var(--a);transition:.3s}.fq i::after{transform:rotate(90deg)}
+.fq.o i::after{transform:rotate(0)}
+.fa{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease)}.fq.o .fa{grid-template-rows:1fr}
+.fa>div{overflow:hidden}.fa p{padding:0 24px 22px;color:var(--t2)}
+/* contact */
+.cg{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}
+.info{display:grid;gap:14px;margin-top:30px}.info div{padding:16px 20px}.info small{display:block;color:var(--t3);font:400 .72rem "JetBrains Mono"}
+form{padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.fld{display:flex;flex-direction:column;gap:6px}.fld.w{grid-column:1/-1}
+label{font-size:.86rem;color:var(--t2)}
+input,select,textarea{width:100%;min-height:48px;padding:12px 14px;border-radius:12px;background:rgba(7,9,7,.7);border:1px solid rgba(255,255,255,.14);color:var(--t);font:400 16px Inter,sans-serif;transition:.25s}
+textarea{min-height:130px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--a);box-shadow:0 0 0 3px rgba(183,255,60,.16)}
+.err{color:#ff8a7a;font-size:.8rem;min-height:1em}[aria-invalid=true]{border-color:#ff8a7a}
+#status{grid-column:1/-1;padding:16px;border-radius:14px;border:1px solid rgba(183,255,60,.3);background:rgba(183,255,60,.06);font-size:.92rem;display:none}#status.show{display:block}#status .btn{margin-top:10px;min-height:38px}
+footer{border-top:1px solid var(--bd);padding:70px 0 30px;background:var(--bg2)}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+footer h4{font-size:.95rem;margin-bottom:16px}footer ul{display:grid;gap:10px;color:var(--t2);font-size:.92rem}footer a:hover{color:var(--a)}
+.fb{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);color:var(--t3);font-size:.85rem}
+#top{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:50px;height:50px;border-radius:50%;color:var(--a);cursor:pointer;opacity:0;pointer-events:none;transform:translateY(12px);z-index:40;font-size:1.2rem;border:1px solid var(--bd);transition:.35s var(--ease)}
+#top.show{opacity:1;pointer-events:auto;transform:none}
+dialog{padding:34px;width:min(600px,calc(100% - 28px));color:var(--t);background:rgba(14,19,14,.92);max-height:88vh;overflow:auto}
+dialog::backdrop{background:rgba(0,0,0,.72);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+dialog h3{font-size:1.6rem;margin:6px 0 12px}dialog p{color:var(--t2);margin-bottom:12px}dialog ul{margin:14px 0}dialog li{padding:4px 0 4px 18px;position:relative;font-size:.93rem}dialog li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:2px;background:var(--a)}
+.dact{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+@media(max-width:980px){
+.menu{position:absolute;top:76px;left:0;right:0;flex-direction:column;padding:14px;border-radius:24px;background:rgba(10,14,10,.95);border:1px solid var(--bd);opacity:0;transform:translateY(-10px);pointer-events:none;transition:.35s var(--ease)}
+.menu.open{opacity:1;transform:none;pointer-events:auto}.menu a{padding:14px;font-size:1.05rem}
+.burger{display:block}.nav>.btn{display:none}
+.hero,.split,.cg{grid-template-columns:1fr}.viz{max-width:400px}
+.g3c{grid-template-columns:1fr 1fr}.fg{grid-template-columns:1fr 1fr}
+.steps{grid-template-columns:1fr;gap:18px}.steps::before,.steps::after{display:none}.num{margin-bottom:12px}
+}
+@media(max-width:700px){
+section{padding:76px 0}.g3c,.g2c,.vm,.fg,form{grid-template-columns:1fr}form{padding:22px}.calc{padding:24px}
+.cta .btn{width:100%}.pn{display:none}.shot{height:170px}
+.glass.glass{--bl:8px}.l{transform:none!important}.res .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv,.rise{opacity:1;transform:none}#ld{display:none}}
+</style>
+</head>
+<body>
+<div id="ld" aria-hidden="true">CORTEXA NEXUS</div><div id="sp"></div>
+<header id="hd"><div class="wrap"><div class="nav glass g2">
+<a href="#home" class="logo" aria-label="CORTEXA NEXUS home"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><path d="M17 2 31 10v14L17 32 3 24V10z" stroke="#B7FF3C" stroke-width="1.6"/><path d="M11 13l6-3.5L23 13v8l-6 3.5L11 21z" stroke="#F5F7F2" stroke-width="1.4"/><circle cx="17" cy="17" r="2.6" fill="#B7FF3C"/></svg><span>CORTEXA<small>NEXUS</small></span></a>
+<ul class="menu" id="menu"><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#expertise">Expertise</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#process">Process</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#contact">Contact</a></li></ul>
+<a class="btn p" href="#contact">Let’s Talk</a>
+<button class="burger" id="bg" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+</div></div></header>
+
+<main>
+<section id="home"><div class="wrap hero" id="hero">
+<div>
+<span class="tag-top glass g1 rise">INNOVATION • TECHNOLOGY • DIGITAL SOLUTIONS</span>
+<h1><span class="rise" style="display:block;animation-delay:.1s">Connecting <span class="g">Ideas.</span></span><span class="rise" style="display:block;animation-delay:.25s">Building <span class="g">Digital Futures.</span></span></h1>
+<p class="lead rise" style="animation-delay:.4s">We transform ambitious ideas into powerful digital experiences through innovative design, intelligent engineering and modern technology.</p>
+<div class="cta rise" style="animation-delay:.55s"><a class="btn p" href="#contact">Start a Project</a><a class="btn" href="#portfolio">Explore Our Work</a></div>
+<div class="scrollcue rise" style="animation-delay:.8s"><i></i>SCROLL TO EXPLORE</div>
+</div>
+<div class="viz rise" style="animation-delay:.3s" aria-hidden="true">
+<div class="l" style="inset:0;--d:6"><svg viewBox="0 0 500 500"><defs><radialGradient id="cg"><stop offset="0" stop-color="#B7FF3C" stop-opacity=".45"/><stop offset="1" stop-color="#B7FF3C" stop-opacity="0"/></radialGradient></defs><circle cx="250" cy="250" r="220" fill="url(#cg)" opacity=".4"/>
+<g class="ln"><line x1="250" y1="250" x2="90" y2="110"/><line x1="250" y1="250" x2="420" y2="90"/><line x1="250" y1="250" x2="440" y2="340"/><line x1="250" y1="250" x2="120" y2="400"/><line x1="250" y1="250" x2="250" y2="40"/><line x1="90" y1="110" x2="250" y2="40"/><line x1="420" y1="90" x2="440" y2="340"/></g>
+<g stroke="#B7FF3C" stroke-width="1.4" fill="rgba(183,255,60,.05)"><path d="M250 165l75 43v84l-75 43-75-43v-84z"/><path d="M250 205l42 24v48l-42 24-42-24v-48z" stroke="#F5F7F2" stroke-opacity=".7"/></g><circle cx="250" cy="250" r="9" fill="#B7FF3C"/>
+<g class="nd"><circle cx="90" cy="110" r="6"/><circle cx="420" cy="90" r="6" style="animation-delay:.6s"/><circle cx="440" cy="340" r="6" style="animation-delay:1.2s"/><circle cx="120" cy="400" r="6" style="animation-delay:1.8s"/><circle cx="250" cy="40" r="5" style="animation-delay:2.4s"/><circle cx="60" cy="260" r="3"/><circle cx="470" cy="200" r="3" style="animation-delay:1s"/></g></svg></div>
+<div class="l" style="left:4%;top:56%;--d:22"><div class="sph fl" style="width:92px;height:92px"></div></div>
+<div class="l" style="right:8%;top:6%;--d:30"><div class="sph fl" style="width:58px;height:58px;animation-delay:-3s"></div></div>
+<div class="l" style="left:-4%;top:16%;--d:16"><div class="pn glass g3 fl"><b>design</b> → prototype</div></div>
+<div class="l" style="right:-2%;bottom:14%;--d:20"><div class="pn glass g3 fl" style="animation-delay:-2s"><b>code</b> → deploy</div></div>
+</div></div></section>
+
+<section id="about" class="alt"><div class="wrap split">
+<div class="rv"><span class="eyebrow">WHO WE ARE</span><h2>Technology Meets Imagination.</h2>
+<p class="sub">At CORTEXA NEXUS, we believe every great digital product begins with an idea. Our focus is to transform those ideas into meaningful digital experiences through thoughtful design, innovative technologies and reliable development practices.</p>
+<p class="sub">We bring together creativity, engineering and problem-solving to develop websites, applications and software solutions that help individuals and businesses move forward in an increasingly digital world.</p>
+<div class="vm"><div class="card glass g2 lift"><h3>Our Vision</h3><p>To create meaningful digital experiences that connect people, ideas and opportunities while shaping a smarter and more innovative digital future.</p></div><div class="card glass g2 lift"><h3>Our Mission</h3><p>To deliver creative, efficient and user-focused digital solutions through modern technologies, continuous learning and a commitment to quality.</p></div></div></div>
+<div class="rv glass g3" style="padding:26px" aria-hidden="true"><svg viewBox="0 0 400 400" width="100%"><g fill="none" stroke="#B7FF3C" stroke-opacity=".5"><circle cx="200" cy="200" r="150"/><circle cx="200" cy="200" r="100" stroke-dasharray="4 8"/><rect x="140" y="140" width="120" height="120" rx="18" transform="rotate(45 200 200)"/><path d="M200 50v80M200 270v80M50 200h80M270 200h80"/></g><circle cx="200" cy="200" r="10" fill="#B7FF3C"/><g fill="#B7FF3C"><circle cx="200" cy="50" r="5"/><circle cx="350" cy="200" r="5"/><circle cx="200" cy="350" r="5"/><circle cx="50" cy="200" r="5"/></g></svg><p class="stmt">Think Beyond. Build What’s Next.</p></div>
+</div></section>
+
+<section id="services"><div class="wrap"><div class="head rv"><span class="eyebrow">WHAT WE DO</span><h2>Digital Solutions. Built With Purpose.</h2><p class="sub">From initial ideas to fully developed digital products, we provide solutions that help turn possibilities into reality.</p></div><div class="grid g3c" id="svc"></div></div></section>
+
+<section id="expertise" class="alt"><div class="wrap"><div class="head rv"><span class="eyebrow">TECHNOLOGY STACK</span><h2>Engineered With Modern Technology.</h2><p class="sub">Our capabilities combine modern development technologies, thoughtful engineering and creative problem-solving.</p></div><div class="tabs" id="xt" role="group" aria-label="Technology categories"></div><div class="tech" id="xg"></div><p class="note">Listed as technologies we work with, not certifications or proficiency ratings. To be confirmed by the team before launch.</p></div></section>
+
+<section id="portfolio"><div class="wrap"><div class="head rv"><span class="eyebrow">OUR WORK</span><h2>Ideas Into Digital Experiences.</h2><p class="sub">Explore selected projects, concepts and prototypes that demonstrate our approach to digital development.</p></div><div class="tabs" id="pt" role="group" aria-label="Filter projects"></div><div class="grid g2c" id="pj"></div></div></section>
+
+<section id="process" class="alt"><div class="wrap"><div class="head rv"><span class="eyebrow">HOW WE WORK</span><h2>From Vision to Reality.</h2></div><div class="steps" id="st"></div></div></section>
+
+<section id="why"><div class="wrap"><div class="head rv"><span class="eyebrow">WHY CORTEXA NEXUS</span><h2>Built Around Your Vision.</h2></div><div class="grid g3c why" id="wy"></div></div></section>
+
+<section id="pricing" class="alt"><div class="wrap"><div class="head rv"><span class="eyebrow">TRANSPARENT PRICING</span><h2>Great Ideas. Clear Pricing.</h2><p class="sub">Explore our starting prices and find the right digital solution for your project. Every project is different, and we provide customized quotations based on your requirements.</p></div>
+<div class="tabs" id="prt" role="group" aria-label="Pricing category"></div><div class="grid g3c" id="pr"></div>
+<p class="disc glass g1">All prices are indicative starting prices. Final quotations depend on project complexity, requirements, integrations and delivery scope. Domain registration, hosting, paid third-party services, transaction charges and applicable taxes are quoted separately where relevant. These are proposed introductory prices for small projects, prototypes and early-stage client work, and are pending founder confirmation.</p>
+<div class="calc glass g3" id="calc"><span class="eyebrow">PRICE CALCULATOR</span><h3>Calculate Your Project Cost.</h3><p class="sub">Tell us what you want to build and get an indicative project estimate.</p>
+<div class="cs"><b>1 · SERVICE</b><div class="opts" id="c1"></div></div><div class="cs"><b>2 · COMPLEXITY</b><div class="opts" id="c2"></div></div><div class="cs"><b>3 · ADDITIONAL REQUIREMENTS</b><div class="opts" id="c3"></div></div>
+<div class="res glass g2"><div><small>Your Estimated Project Cost</small><span class="big" id="cr"></span><small id="cn" style="margin-top:6px;max-width:48ch"></small></div><button class="btn p" id="cq" type="button">Get My Custom Quote</button></div>
+<p class="note">This is a preliminary estimate, not a binding quotation. Add-on amounts are indicative and editable.</p></div></div></section>
+
+<section id="faq"><div class="wrap"><div class="head rv"><span class="eyebrow">FAQ</span><h2>Frequently Asked Questions.</h2></div><div class="faq" id="fq"></div></div></section>
+
+<section id="contact" class="alt"><div class="wrap cg">
+<div class="rv"><span class="eyebrow">LET’S CONNECT</span><h2>Have an Idea? Let’s Build It.</h2><p class="sub">Tell us about your project. Our team will review your requirements and help you explore the right digital solution.</p>
+<div class="info"><div class="glass g1"><small>EMAIL</small><span id="ce">[OFFICIAL EMAIL]</span></div><div class="glass g1"><small>PHONE</small><span id="cp">[OFFICIAL PHONE]</span></div><div class="glass g1"><small>LOCATION</small>[OFFICIAL LOCATION]</div></div></div>
+<form id="f" novalidate class="glass g3 rv">
+<div class="fld"><label for="n">Full name *</label><input id="n" name="name" autocomplete="name"><span class="err" id="e-n"></span></div>
+<div class="fld"><label for="m">Email address *</label><input id="m" name="email" type="email" autocomplete="email"><span class="err" id="e-m"></span></div>
+<div class="fld"><label for="ph">Phone (optional)</label><input id="ph" name="phone" type="tel" autocomplete="tel"></div>
+<div class="fld"><label for="co">Company (optional)</label><input id="co" name="company" autocomplete="organization"></div>
+<div class="fld"><label for="sv">Service required *</label><select id="sv" name="service"><option value="">Select a service</option></select><span class="err" id="e-s"></span></div>
+<div class="fld"><label for="cx">Project complexity</label><select id="cx" name="complexity"><option>Not sure</option><option>Basic</option><option>Standard</option><option>Advanced</option></select></div>
+<div class="fld"><label for="bu">Estimated budget</label><input id="bu" name="budget" placeholder="e.g. ₹15,000"></div>
+<div class="fld"><label for="tl">Project timeline</label><select id="tl" name="timeline"><option>Flexible</option><option>Within 1 month</option><option>1 to 3 months</option><option>3+ months</option></select></div>
+<div class="fld w"><label for="ms">Project details *</label><textarea id="ms" name="message"></textarea><span class="err" id="e-t"></span></div>
+<div class="fld w"><button class="btn p" id="sb" type="submit">Send Project Enquiry</button></div>
+<div id="status" role="status" aria-live="polite"></div></form></div></section>
+</main>
+
+<footer><div class="wrap"><div class="fg">
+<div><a href="#home" class="logo"><svg width="30" height="30" viewBox="0 0 34 34" fill="none"><path d="M17 2 31 10v14L17 32 3 24V10z" stroke="#B7FF3C" stroke-width="1.6"/><circle cx="17" cy="17" r="2.6" fill="#B7FF3C"/></svg><span>CORTEXA<small>NEXUS</small></span></a><p class="g" style="margin:16px 0 8px;font-weight:500">Connecting Ideas. Building Digital Futures.</p><p style="color:var(--t2);font-size:.92rem;max-width:34ch">Transforming ideas into modern digital experiences through creativity, technology and innovation.</p></div>
+<div><h4>Quick links</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#services">Services</a></li><li><a href="#expertise">Our Expertise</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#contact">Contact</a></li></ul></div>
+<div><h4>Services</h4><ul id="fs"></ul></div>
+<div><h4>Connect</h4><ul><li id="fe">[OFFICIAL EMAIL]</li><li id="fp">[OFFICIAL PHONE]</li><li>Social links: pending</li></ul></div></div>
+<div class="fb"><span>© 2026 CORTEXA NEXUS. All rights reserved.</span><span>Privacy Policy and Terms: pending, to be published before launch</span></div></div></footer>
+<button id="top" class="glass g2" aria-label="Back to top">↑</button>
+<dialog id="dlg" class="glass g3"></dialog>
+
+<script>
+const CONFIG={email:"",phone:""}; // set official details to enable mailto / tel links
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],ic=p=>`<svg viewBox="0 0 24 24">${p}</svg>`,R=n=>"₹"+n.toLocaleString("en-IN"),tg=a=>`<div class="tags">${a.map(t=>`<span>${t}</span>`).join("")}</div>`;
+const lis=a=>a.map(x=>`<li>${x}</li>`).join("");
+// name, short, icon, desc, caps, time, base[basic,std,adv], addons, plans[name,ideal,features]
+const D=[
+{n:"Website Development",s:"Website",i:'<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/>',d:"We design and develop modern, responsive and high-performance websites that create strong digital identities and engaging user experiences.",c:["Business websites","Portfolio websites","Landing pages","Corporate websites","Custom web apps","Responsive development"],t:"1 to 4 weeks",b:[7999,14999,24999],a:[["Additional pages",1500],["Custom animations",3000],["CMS integration",5000],["Advanced SEO",2500],["Database integration",5000]],
+p:[["Starter Website","Individuals, portfolios and small businesses.","Single-page website;Responsive layout;Basic UI design;Contact section;Basic SEO setup;Social media links;Basic animations"],["Business Website","Startups and growing businesses.","Up to 5 standard pages;Custom UI design;Responsive development;Contact form;Basic SEO;Interactive elements;Performance optimization;Deployment assistance"],["Premium Website","Established businesses and advanced brand websites.","Up to 10 standard pages;Advanced UI/UX;Custom animations;Interactive components;Advanced forms;CMS integration where required;SEO setup;Performance optimization;Deployment assistance"]]},
+{n:"App Development",s:"App",i:'<rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/>',d:"We create intuitive and functional mobile application experiences designed around user needs, performance and usability.",c:["Android","iOS","Cross-platform","App interfaces","Interactive prototypes"],t:"4 to 12 weeks",b:[29999,59999,null],a:[["User authentication",6000],["Payment integration",8000],["API integration",7000],["Admin dashboard",12000],["Push notifications",4000]],
+p:[["App Starter","Early ideas that need a working prototype.","Basic application prototype;Essential screens;Basic navigation;Simple UI;Basic application functionality"],["App Standard","Products ready for real users.","Multiple application screens;Custom UI/UX;API integration;User authentication;Database integration;Testing"],["App Advanced","Complex, large-scope applications.","Advanced application architecture;Complex features;Backend integration;Third-party services;Advanced functionality;Testing and deployment planning"]]},
+{n:"Software Development",s:"Software",i:'<path d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/>',d:"We develop customized software solutions that simplify processes, solve problems and support evolving business requirements.",c:["Custom software","Business applications","Automation tools","Management systems","Software integration"],t:"3 to 10 weeks",b:[19999,49999,null],a:[["Database",6000],["User management",5000],["Automation",8000],["Advanced dashboard",9000],["Third-party integration",7000]],
+p:[["Software Basic","Simple internal tools and utilities.","Basic custom software;Essential features;Simple user interface;Basic data handling"],["Software Standard","Teams needing multi-feature tools.","Multi-feature software;Database integration;User management;Dashboard interface;Testing and optimization"],["Software Custom","Complex, business-specific systems.","Custom architecture;Complex workflows;Advanced integrations;Custom business logic;Scalable development"]]},
+{n:"UI/UX Design",s:"UI/UX",i:'<path d="M4 20l4-1 11-11-3-3L5 16zM14 6l3 3"/>',d:"We combine research, creativity and usability principles to design intuitive digital interfaces.",c:["UI design","UX design","Wireframing","Interactive prototypes","Design systems","User journeys"],t:"1 to 3 weeks",b:[4999,9999,19999],a:[["Wireframes",2000],["Design system",5000],["Interactive prototype",3000],["Additional screens",1500]],
+p:[["UI Starter","Early-stage concepts.","Basic wireframes;Essential screen design;Colour system;Typography selection"],["UI Standard","Products needing polished screens.","Multi-screen interface;User journey planning;High-fidelity designs;Interactive prototype"],["UI Premium","Complete product design.","Complete UI/UX design;Detailed user flows;Design system;Interactive prototypes;Responsive screen designs;Design documentation"]]},
+{n:"E-commerce Solutions",s:"E-commerce",i:'<path d="M3 4h2l2 12h11l2-8H7"/><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/>',d:"We build digital shopping experiences that help businesses present their products, connect with customers and manage online sales.",c:["Online stores","Product catalogues","Shopping cart","Checkout","Payment gateways","Dashboards"],t:"3 to 8 weeks",b:[24999,44999,69999],a:[["Payment gateway",6000],["Inventory management",7000],["Customer accounts",4000],["Admin dashboard",9000],["Advanced product filtering",3500]],
+p:[["Store Starter","Small catalogues getting online.","Basic online store;Product catalogue;Product detail pages;Shopping cart interface;Responsive design"],["Store Standard","Growing online businesses.","Advanced product catalogue;Shopping cart;Checkout integration;Payment gateway integration;Order management;Admin dashboard basics"],["Store Premium","Established, custom stores.","Custom e-commerce design;Advanced product management;Advanced checkout;Payment integration;Order management;Admin dashboard;Advanced integrations;Optimization"]]}];
+const CX=["Basic","Standard","Advanced"];
+// services
+$("#svc").innerHTML=D.map((s,i)=>`<article class="card glass g2 lift svc rv" tabindex="0" role="button" data-s="${i}" aria-label="${s.n} details"><div class="ico">${ic(s.i)}</div><h3>${s.n}</h3><p>${s.d}</p>${tg(s.c)}<span class="go">View details <b>→</b></span></article>`).join("");
+$("#fs").innerHTML=D.map(s=>`<li><a href="#services">${s.n}</a></li>`).join("");
+$("#sv").insertAdjacentHTML("beforeend",D.map(s=>`<option>${s.n}</option>`).join("")+"<option>Other</option>");
+// modal
+const dlg=$("#dlg"),open=h=>{dlg.innerHTML=h+'<div class="dact"><button class="btn" data-x>Close</button></div>';dlg.showModal()};
+dlg.addEventListener("click",e=>{if(e.target===dlg||e.target.closest("[data-x]"))dlg.close()});
+// prefill
+function prefill(o){const set=(id,v)=>{if(v!=null)$(id).value=v};set("#sv",o.sv);set("#cx",o.cx);set("#bu",o.bu);if(o.ms!=null)set("#ms",o.ms);dlg.open&&dlg.close();$("#contact").scrollIntoView({behavior:"smooth"});setTimeout(()=>$("#n").focus({preventScroll:true}),700)}
+const svcOpen=i=>{const s=D[i];open(`<span class="eyebrow">SERVICE</span><h3>${s.n}</h3><p>${s.d}</p><ul>${lis(s.c)}</ul><p><b class="g">Starting price:</b> ${R(s.b[0])} onwards<br><b class="g">Estimated delivery:</b> ${s.t} (indicative, depends on scope)</p>`.replace("</p>","</p>")+`<div class="dact"><button class="btn p" data-q="${i}">Get a Quote</button></div>`)};
+$("#svc").addEventListener("click",e=>{const c=e.target.closest("[data-s]");if(c)svcOpen(c.dataset.s)});
+$("#svc").addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.dataset.s){e.preventDefault();svcOpen(e.target.dataset.s)}});
+dlg.addEventListener("click",e=>{const q=e.target.closest("[data-q]");if(q)prefill({sv:D[q.dataset.q].n})});
+// expertise
+const X=[["Frontend","HTML5,CSS3,JavaScript,TypeScript,React,Next.js,Tailwind CSS"],["Backend","Node.js,Python,Express.js,REST APIs"],["Mobile","React Native,Flutter"],["Database","MongoDB,PostgreSQL,Firebase,Supabase"],["Design","Figma,Adobe tools,Wireframing,Prototyping"],["Deployment","Git,GitHub,Vercel,Netlify,Cloud deployment"]];
+const mono=t=>t.replace(/[^A-Za-z0-9]/g,"").slice(0,2);
+function xr(k){$$("#xt button").forEach((b,i)=>b.setAttribute("aria-pressed",i===k));$("#xg").innerHTML=X[k][1].split(",").map((t,i)=>`<div class="tc glass g1" tabindex="0" data-tip="${X[k][0]} · ${t}" style="animation-delay:${i*50}ms"><div class="m">${mono(t)}</div><span>${t}</span></div>`).join("")}
+$("#xt").innerHTML=X.map((x,i)=>`<button type="button" data-k="${i}">${x[0]}</button>`).join("");$("#xt").onclick=e=>{const b=e.target.closest("button");if(b)xr(+b.dataset.k)};xr(0);
+// portfolio
+const mk=k=>{const m={web:'<rect x="16" y="16" width="168" height="14" rx="4" fill="#B7FF3C" opacity=".6"/><rect x="16" y="44" width="100" height="14" rx="4" fill="#F5F7F2" opacity=".7"/><rect x="16" y="66" width="130" height="8" rx="4" fill="#737B71"/><rect x="16" y="90" width="50" height="22" rx="11" fill="#B7FF3C"/>',dash:'<rect x="16" y="16" width="50" height="108" rx="6" fill="#121812"/><path d="M80 110l24-30 22 14 30-50 28 20" fill="none" stroke="#B7FF3C" stroke-width="3"/><rect x="80" y="20" width="44" height="20" rx="4" fill="#121812"/><rect x="130" y="20" width="54" height="20" rx="4" fill="#121812"/>',shop:'<rect x="16" y="16" width="52" height="64" rx="6" fill="#121812"/><rect x="76" y="16" width="52" height="64" rx="6" fill="#121812"/><rect x="136" y="16" width="48" height="64" rx="6" fill="#121812"/><rect x="16" y="92" width="168" height="26" rx="13" fill="#B7FF3C" opacity=".85"/>',app:'<rect x="70" y="10" width="60" height="120" rx="10" fill="#121812" stroke="#B7FF3C"/><rect x="78" y="24" width="44" height="30" rx="5" fill="#B7FF3C" opacity=".6"/><rect x="78" y="62" width="44" height="8" rx="3" fill="#737B71"/><circle cx="100" cy="112" r="7" fill="#B7FF3C"/>',ui:'<circle cx="50" cy="50" r="22" fill="#B7FF3C"/><circle cx="100" cy="50" r="22" fill="#8DDB2F" opacity=".7"/><circle cx="150" cy="50" r="22" fill="#F5F7F2" opacity=".8"/><rect x="24" y="90" width="152" height="10" rx="5" fill="#737B71"/><rect x="24" y="108" width="100" height="10" rx="5" fill="#737B71"/>'};return`<svg viewBox="0 0 200 140" role="img" aria-label="Concept interface preview"><rect x="4" y="4" width="192" height="132" rx="10" fill="#0a0f0b" stroke="#B7FF3C" stroke-opacity=".4"/>${m[k]}</svg>`};
+const PJ=[["Business Website Concept","Websites","Web Development","Concept","web","A modern business website concept demonstrating professional branding, responsive layouts and intuitive navigation.",["HTML5","CSS3","React"]],["Digital Productivity Dashboard","Software","Software Development","Prototype","dash","A dashboard prototype designed to present information through a clean and organized interface.",["React","TypeScript","Node.js"]],["E-commerce Store Prototype","Websites","E-commerce","Prototype","shop","An online shopping experience concept focused on product presentation, usability and simple navigation.",["Next.js","Tailwind CSS","Firebase"]],["Mobile Application Concept","Applications","App Development","Concept","app","A mobile interface prototype exploring intuitive navigation and user-centred application design.",["Figma","React Native","Flutter"]],["Design System Concept","UI/UX","UI/UX Design","Concept","ui","A concept design system showing colour, type and component foundations for a consistent interface.",["Figma","Design systems"]]];
+$("#pt").innerHTML=["All","Websites","Applications","Software","UI/UX"].map((f,i)=>`<button type="button" data-f="${f}" aria-pressed="${!i}">${f}</button>`).join("");
+$("#pj").innerHTML=PJ.map((p,i)=>`<article class="proj glass g2 lift rv" tabindex="0" role="button" data-c="${p[1]}" data-i="${i}" aria-label="${p[0]}, ${p[3]}"><div class="shot">${mk(p[4])}<span class="badge">${p[3]}</span><div class="ov">VIEW ${p[3].toUpperCase()}</div></div><div class="pb"><span class="cat">${p[2]}</span><h3>${p[0]}</h3><p>${p[5]}</p>${tg(p[6])}</div></article>`).join("");
+$("#pt").onclick=e=>{const b=e.target.closest("button");if(!b)return;$$("#pt button").forEach(x=>x.setAttribute("aria-pressed",x===b));$$(".proj").forEach(c=>{const hide=b.dataset.f!=="All"&&c.dataset.c!==b.dataset.f;if(hide){c.classList.add("out");setTimeout(()=>c.classList.add("hide"),300)}else{c.classList.remove("hide");requestAnimationFrame(()=>requestAnimationFrame(()=>c.classList.remove("out")))}})};
+const pjOpen=i=>{const p=PJ[i];open(`<span class="eyebrow">${p[3].toUpperCase()} · ${p[2].toUpperCase()}</span><h3>${p[0]}</h3><div style="margin:14px 0;border-radius:16px;overflow:hidden;background:#0d130e">${mk(p[4])}</div><p>${p[5]}</p>${tg(p[6])}<p style="margin-top:16px;font-size:.85rem">This is a ${p[3].toLowerCase()}, not a completed client project. No live link exists yet.</p>`)};
+$("#pj").addEventListener("click",e=>{const c=e.target.closest("[data-i]");if(c)pjOpen(c.dataset.i)});
+$("#pj").addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.dataset.i){e.preventDefault();pjOpen(e.target.dataset.i)}});
+// process + why
+const ST=[["Discover","We begin by understanding your ideas, goals, audience and project requirements."],["Design","We translate requirements into meaningful user experiences and visually engaging interfaces."],["Develop","Our development process turns approved designs into functional, responsive and reliable digital products."],["Deploy","We prepare the final product for launch through quality checks, optimization and deployment."]];
+$("#st").innerHTML=ST.map((s,i)=>`<div class="step"><div class="num">${i+1}</div><div class="glass g2 lift gl"><h3>${s[0]}</h3><p>${s[1]}</p></div></div>`).join("");
+const WY=[["Innovation First","We explore modern ideas and technologies to develop solutions that move beyond conventional approaches.",'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10c1 1 1 2 1 3h6c0-1 0-2 1-3a6 6 0 0 0-4-10z"/>'],["User-Centred Design","We prioritize clarity, usability and meaningful user experiences.",'<circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 15-5 16 0"/>'],["Modern Technology","We use appropriate modern development tools and technologies.",'<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>'],["Tailored Solutions","Every project is approached according to its unique requirements.",'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/>'],["Quality Focus","We emphasize clean implementation, testing, responsiveness and attention to detail.",'<path d="M5 12l4 4 10-10"/>'],["Collaborative Approach","We value communication, feedback and collaboration throughout the development journey.",'<circle cx="8" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M2 20c1-5 11-5 12 0M15 15c4-1 7 1 7 5"/>']];
+$("#wy").innerHTML=WY.map(w=>`<article class="card glass g2 lift rv"><div class="ico">${ic(w[2])}</div><h3>${w[0]}</h3><p>${w[1]}</p></article>`).join("");
+// pricing
+function pr(k){$$("#prt button").forEach((b,i)=>b.setAttribute("aria-pressed",i===k));const s=D[k];$("#pr").innerHTML=s.p.map((p,j)=>`<article class="plan card glass g2 ${j===1?"ft":""}">${j===1?'<span class="pop">POPULAR</span>':""}<h3>${p[0]}</h3><div class="price">${s.b[j]?R(s.b[j]):"Custom"}<small>${s.b[j]?" onwards":" quotation"}</small></div><p class="ideal">Ideal for: ${p[1]}</p><ul>${lis(p[2].split(";"))}</ul><button class="btn ${j===1?"p":""}" data-k="${k}" data-j="${j}">Get a Quote</button></article>`).join("")}
+$("#prt").innerHTML=D.map((s,i)=>`<button type="button" data-k="${i}">${s.s}</button>`).join("");$("#prt").onclick=e=>{const b=e.target.closest("button");if(b)pr(+b.dataset.k)};pr(0);
+$("#pr").onclick=e=>{const b=e.target.closest("[data-j]");if(!b)return;const s=D[b.dataset.k],j=+b.dataset.j;prefill({sv:s.n,cx:CX[j],bu:s.b[j]?R(s.b[j])+" onwards":"Custom quotation",ms:`Interested in the ${s.p[j][0]} plan.`})};
+// calculator
+let cs=0,cc=0,ca=new Set();
+function cr(){const s=D[cs];$$("#c1 button").forEach((b,i)=>b.setAttribute("aria-pressed",i===cs));$$("#c2 button").forEach((b,i)=>b.setAttribute("aria-pressed",i===cc));$("#c3").innerHTML=s.a.map((a,i)=>`<button type="button" data-a="${i}" aria-pressed="${ca.has(i)}">${a[0]} (+${R(a[1])})</button>`).join("");
+const base=s.b[cc],custom=base==null;$("#cr").textContent=custom?"Custom quotation required":R(base+[...ca].reduce((t,i)=>t+s.a[i][1],0));$("#cn").textContent=custom?"Advanced "+s.s.toLowerCase()+" scope can’t be estimated reliably online.":`Indicative estimate from ${R(base)} base plus ${ca.size} add-on${ca.size===1?"":"s"}. Taxes and third-party costs excluded.`}
+$("#c1").innerHTML=D.map((s,i)=>`<button type="button" data-s="${i}">${s.n}</button>`).join("");$("#c2").innerHTML=CX.map((c,i)=>`<button type="button" data-c="${i}">${c}</button>`).join("");
+$("#c1").onclick=e=>{const b=e.target.closest("[data-s]");if(b){cs=+b.dataset.s;ca.clear();cr()}};$("#c2").onclick=e=>{const b=e.target.closest("[data-c]");if(b){cc=+b.dataset.c;cr()}};
+$("#c3").onclick=e=>{const b=e.target.closest("[data-a]");if(b){const i=+b.dataset.a;ca.has(i)?ca.delete(i):ca.add(i);cr()}};
+$("#cq").onclick=()=>{const s=D[cs],ad=[...ca].map(i=>s.a[i][0]);prefill({sv:s.n,cx:CX[cc],bu:$("#cr").textContent,ms:`Calculator estimate: ${$("#cr").textContent}.\nService: ${s.n}, ${CX[cc]}.\nAdd-ons: ${ad.length?ad.join(", "):"none"}.\n\nProject details: `})};cr();
+// faq
+const FQ=[["How do I start a project?","Choose a service, submit an enquiry and share your requirements."],["Are the prices fixed?","The displayed amounts are starting prices. Final quotations depend on project scope and complexity."],["Can I request a custom website or application?","Yes. Custom projects can be discussed through the enquiry form."],["How long does development take?","Delivery timelines depend on the scope, complexity and approval process."],["Do you provide maintenance?","Maintenance and support can be discussed and quoted separately."],["Are domain and hosting included?","They are generally quoted separately unless specifically included in a project proposal."],["Can I request changes during development?","Yes. Requirements and revision arrangements should be agreed upon before development begins."]];
+$("#fq").innerHTML=FQ.map((f,i)=>`<div class="fq glass g2"><button type="button" aria-expanded="false" aria-controls="fa${i}"><span>${f[0]}</span><i></i></button><div class="fa" id="fa${i}" role="region"><div><p>${f[1]}</p></div></div></div>`).join("");
+$("#fq").onclick=e=>{const b=e.target.closest("button");if(!b)return;const q=b.parentElement,o=q.classList.toggle("o");b.setAttribute("aria-expanded",o)};
+// nav
+const bg=$("#bg"),mn=$("#menu"),tgm=o=>{mn.classList.toggle("open",o);bg.classList.toggle("x",o);bg.setAttribute("aria-expanded",o)};
+bg.onclick=()=>tgm(!mn.classList.contains("open"));mn.onclick=e=>{if(e.target.tagName==="A")tgm(false)};addEventListener("keydown",e=>{if(e.key==="Escape")tgm(false)});
+const links=$$(".menu a"),secs=links.map(a=>$(a.getAttribute("href")));
+function onscroll(){let c=0;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<innerHeight*.4)c=i});links.forEach((a,i)=>a.classList.toggle("on",i===c));$("#hd").classList.toggle("sc",scrollY>40);$("#top").classList.toggle("show",scrollY>700);
+$("#sp").style.transform=`scaleX(${scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)})`;
+const st=$("#st"),r=st.getBoundingClientRect(),p=Math.min(1,Math.max(0,(innerHeight*.75-r.top)/Math.max(1,Math.min(r.height,innerHeight*.6))));st.style.setProperty("--p",p);$$(".step").forEach((s,i)=>s.classList.toggle("on",p>i/4+.05))}
+addEventListener("scroll",onscroll,{passive:true});onscroll();$("#top").onclick=()=>scrollTo({top:0,behavior:"smooth"});
+// glass light + hero parallax
+addEventListener("pointermove",e=>{const g=e.target.closest&&e.target.closest(".glass");if(g){const r=g.getBoundingClientRect();g.style.setProperty("--mx",(e.clientX-r.left)/r.width*100+"%");g.style.setProperty("--my",(e.clientY-r.top)/r.height*100+"%")}
+const h=$("#hero").getBoundingClientRect();if(e.clientY<h.bottom&&e.clientY>h.top){const v=$(".viz");v.style.setProperty("--px",e.clientX/innerWidth-.5);v.style.setProperty("--py",e.clientY/innerHeight-.5)}},{passive:true});
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const i=[...e.target.parentElement.children].indexOf(e.target);e.target.style.transitionDelay=Math.min(i,5)*70+"ms";e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});$$(".rv").forEach(el=>io.observe(el));
+addEventListener("load",()=>setTimeout(()=>$("#ld").classList.add("off"),500));
+// contact
+if(CONFIG.email)["#ce","#fe"].forEach(s=>$(s).innerHTML=`<a href="mailto:${CONFIG.email}">${CONFIG.email}</a>`);
+if(CONFIG.phone)["#cp","#fp"].forEach(s=>$(s).innerHTML=`<a href="tel:${CONFIG.phone}">${CONFIG.phone}</a>`);
+const F=$("#f"),S=$("#status");let busy=false;
+const chk=(id,eid,ok,msg)=>{const el=$(id),v=ok(el.value.trim());el.setAttribute("aria-invalid",!v);$(eid).textContent=v?"":msg;return v};
+F.onsubmit=e=>{e.preventDefault();if(busy)return;
+const ok=[chk("#n","#e-n",v=>v.length>1,"Enter your full name."),chk("#m","#e-m",v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),"Enter a valid email address."),chk("#sv","#e-s",v=>v,"Choose a service."),chk("#ms","#e-t",v=>v.length>9,"Describe your project in at least 10 characters.")];
+if(ok.includes(false)){F.querySelector("[aria-invalid=true]").focus();return}
+busy=true;$("#sb").disabled=true;$("#sb").textContent="Preparing…";
+const d=Object.fromEntries(new FormData(F)),body=`Name: ${d.name}\nEmail: ${d.email}\nPhone: ${d.phone||"-"}\nCompany: ${d.company||"-"}\nService: ${d.service}\nComplexity: ${d.complexity}\nBudget: ${d.budget||"-"}\nTimeline: ${d.timeline}\n\n${d.message}`;
+setTimeout(()=>{S.classList.add("show");
+if(CONFIG.email){S.textContent="Your email app should open with the enquiry filled in. Press send there to complete it. Nothing has been sent from this page.";location.href=`mailto:${CONFIG.email}?subject=${encodeURIComponent("Project enquiry: "+d.service)}&body=${encodeURIComponent(body)}`}
+else{S.innerHTML="<strong>Not sent.</strong> The official contact email isn’t configured yet, so this form can’t deliver enquiries. Your details are valid. Copy them to send manually until an email is set up.<br>";const b=document.createElement("button");b.className="btn";b.type="button";b.textContent="Copy enquiry";b.onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(body).then(()=>b.textContent="Copied",()=>b.textContent="Copy failed")};S.append(b)}
+busy=false;$("#sb").disabled=false;$("#sb").textContent="Send Project Enquiry"},500)};
+</script>
+</body>
+</html>
